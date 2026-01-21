@@ -1,0 +1,19 @@
+1. Create Vnet and then create public subnet for create public subnet dont click on no outbound access and then create public VM and create private VM in public subnet.
+
+2. connect public vm via ssh open cmd in laptop and ssh azureuser@public.Ip 
+
+3. Run conmmdnd wget https://tomcat.apache.org/download-native.cgi
+
+4. connect the private VM --> ssh azureuser@private.ip 
+
+5. Run this command --> wget https://tomcat.apache.org/download-native.cgi
+
+6. It will also downlodad in private VM without Nat gateway beacuse in subnet level we did not enabled no outbound access
+
+7. create private subnet click on no outbound access and then create private VM in private subnet.
+
+8. Connect newly created private VM through public VM of public-subnet
+
+9. Run this command --> wget https://tomcat.apache.org/download-native.cgi
+
+10. It will not download because nat gateway not configured.
