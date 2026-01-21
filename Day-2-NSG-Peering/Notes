@@ -1,0 +1,53 @@
+What is an Azure NSG?
+    An Azure Network Security Group (NSG) is a firewall that controls inbound and outbound traffic for Azure resources. It decides who can talk to what, on which port, and from where.
+
+You can attach an NSG to:
+    A subnet
+    A network interface (NIC) of a VM
+
+
+
+What is an Azure NIC?
+    An Azure Network Interface (NIC) is the component that connects a virtual machine to an Azure Virtual Network.
+    Every Azure VM must have at least one NIC.
+    
+    Think of it as the VM’s network card.
+
+What a NIC contains
+A NIC can have:
+    Private IP address (mandatory)
+    
+    Public IP address (optional)
+    
+    Subnet association
+    
+    NSG attached at NIC level
+
+    IP configuration (ipconfig)
+
+
+NIC-level NSG (very important)
+    You can attach an NSG directly to a NIC.
+    Rules applied at NIC level are more specific than subnet rules.
+
+Example:
+    Subnet NSG allows SSH (22)
+    
+    NIC NSG allows only HTTP (80)
+    
+    👉 You cannot SSH to that VM.
+    
+    Rule: Subnet NSG + NIC NSG → both must allow.
+
+
+
+
+
+What is Azure VNet Peering?
+    Azure VNet Peering connects two Virtual Networks (VNets) so resources can communicate privately using Azure’s backbone network, not the public internet.  
+    Peered VNets behave almost like one large network.
+
+Key rules (very important)
+    VNets must not have overlapping IP ranges
+    Peering can be within the same region or across regions (Global Peering)
+    Traffic is private, high-speed, low latency
