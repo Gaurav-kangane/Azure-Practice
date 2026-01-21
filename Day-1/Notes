@@ -1,0 +1,137 @@
+1. Core network concept
+
+AWS
+
+    Uses Amazon VPC
+    
+    Very explicit separation of public and private networking
+    
+    Internet access is tightly controlled using gateways and route tables
+
+Azure
+
+    Uses Azure Virtual Network
+    
+    Feels more integrated and simplified
+    
+    Internet access is often implicit once rules allow it
+
+👉 Think of AWS as more “build it piece by piece”, Azure as more “plug and configure”.
+
+2. Subnets
+
+AWS
+
+    Subnets are public or private by design
+    
+    Public subnet = route to Internet Gateway
+    
+    Private subnet = no internet unless NAT is added
+
+Azure
+
+    No public/private subnet concept
+    
+    Any subnet can host public or private resources
+    
+    Internet access depends on NSG + routing
+
+👉 AWS enforces structure. Azure gives flexibility.
+
+3. Internet access
+
+AWS
+
+    Requires Internet Gateway
+    
+    Outbound internet from private subnet needs NAT Gateway
+    
+    Nothing works unless routing is correct
+
+Azure
+
+    Internet access is default-enabled
+    
+    Controlled mainly via NSGs
+    
+    NAT is usually optional, not mandatory
+    
+    👉 AWS is strict and explicit. Azure is permissive by default.
+
+4. Security layer (firewall)
+
+AWS
+
+    Security Groups → instance-level (stateful)
+    
+    Network ACL → subnet-level (stateless)
+
+Azure
+
+    Network Security Group → subnet or NIC level
+    
+    NSG replaces most use cases of NACL + SG
+
+👉 AWS splits security into two layers. Azure keeps it simpler with NSG.
+
+5. Routing
+
+AWS
+
+    Route tables are mandatory and explicit
+    
+    Every subnet must be associated with a route table
+    
+    You always know where traffic goes
+
+Azure
+
+    System routes exist by default
+    
+    User Defined Routes are optional
+    
+    Easier but sometimes less obvious
+
+6. Load balancers
+
+AWS
+
+    Application Load Balancer
+    
+    Network Load Balancer
+    
+    Classic Load Balancer (legacy)
+
+Azure
+
+    Azure Load Balancer (Layer 4)
+    
+    Application Gateway (Layer 7 + WAF)
+    
+    👉 AWS has more variants. Azure combines features.
+
+7. Hybrid connectivity (On-prem to cloud)
+
+AWS
+
+    AWS Direct Connect
+    
+    Site-to-Site VPN
+
+Azure
+
+    Azure ExpressRoute
+    
+    VPN Gateway
+    
+    Both are solid. Azure often feels easier with Microsoft enterprise setups.
+
+
+| Feature          | AWS              | Azure            |
+| ---------------- | ---------------- | ---------------- |
+| Virtual network  | VPC              | VNet             |
+| Subnet type      | Public / Private | Logical only     |
+| Internet control | IGW + NAT        | NSG              |
+| Firewall style   | SG + NACL        | NSG              |
+| Routing          | Explicit         | Mostly automatic |
+| Learning curve   | Steeper          | Easier           |
