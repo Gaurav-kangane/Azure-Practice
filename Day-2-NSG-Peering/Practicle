@@ -1,0 +1,21 @@
+1. Search NSG and create it then select nsg and go to inbound bound rule add the rule.
+
+2. If you want to attach NSG to subnet to subnet option click on associate and select the subnet.
+
+3. In azure you only attach 1 nsg to the VM and subnet.
+
+4. If you want to change nsg rule for VM go to VM, select the vm and In networking Public IP address click on network interface and then attachted to option select that nsg and change the rules.
+
+5. If you allow SSH (22) and HTTP (80) at the subnet level, but on the VM level you allow port 22 on one VM and only port 80 on the other VM, then you will not be able to SSH into the second VM.
+
+
+
+6. VNET Peering
+
+7. Create 2 vnet and create 1 public and 1 private VM in both vnet.
+
+8. Try to connect from public sever of vnet1 to private server of vnet2, you will get ssh timeout error
+
+9. Let's Peer both vnet, select the vnet1 and in Capabilities click on peerings then click add then give name, select vnet2, scroll down selct option allow access to vnet2 to vnet1 then create it
+
+10. Then check the ssh connection again this time both will be connet.
