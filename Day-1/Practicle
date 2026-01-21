@@ -17,3 +17,8 @@
 9. Run this command --> wget https://tomcat.apache.org/download-native.cgi
 
 10. It will not download because nat gateway not configured.
+
+11. Search for nat and create nat and click on create -->select resource group give next --> in outbound access select new nat ip then select
+    private subnet and review and create.
+
+12. Then check the command --> wget https://tomcat.apache.org/download-native.cgi
