@@ -12,7 +12,7 @@
 
 6. VNET Peering
 
-7. Create 2 vnet and create 1 public and 1 private VM in both vnet.
+7. Create 2 vnet and create 1 public and 1 private VM in both vnet.  (Make sure both cidr ips did not overlap each other)
 
 8. Try to connect from public sever of vnet1 to private server of vnet2, you will get ssh timeout error
 
