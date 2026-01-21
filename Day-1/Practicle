@@ -1,3 +1,5 @@
+Create Resource Group first and then use the services
+
 1. Create Vnet and then create public subnet for create public subnet dont click on no outbound access and then create public VM and create private VM in public subnet.
 
 2. connect public vm via ssh open cmd in laptop and ssh azureuser@public.Ip 
