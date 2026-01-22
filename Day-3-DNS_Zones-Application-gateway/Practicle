@@ -1,0 +1,27 @@
+1. Create Vnet, 1 public subnet, 1 private subnet, 1 for Application gateway subnet, 1 basionhost ,1 private vm, create nat and attach to private subnet
+
+2. Connect the private server via bation-host and run command --> sudo apt upadate -y --> sudo apt install apache2 -y  --> systemctl start apache2 --> systemctl enable apache2
+
+3. use this project for deployment https://github.com/Gaurav-kangane/Pathbased-routing-project.git
+
+4. copy the monolithic index.html file in private server --> vi /var/www/html/index.html  --> systemctl restart apache2
+
+5. Search Application Gateway and create create 1 subnet with outbound access choose that subnet while creating 
+
+6. Go to frontends choose ip address type public and add new ipv4 address then go to backends
+
+7. add backend pool --> give name and choose the private vm and save go next
+
+8. Click Add routing rule --> give name, priority = 100, click on backend targets, choose backend target and backend setting add new give name keep as it is then save
+
+10. Click next till review and create, after successfully create then go applcaiton gateways click on your gateways copy pubilc ip and search on internet check application working or not. 
+
+11. Go and search DNS Zones (it is like route53 in aws ) --> create, Name = gkangane.shop (your domain name), and create it.
+
+12. Go to godaddy website login account click on profile click on your products --> Domain --> click on DNS --> click on Nameserver --> change Nameservers
+
+13. Copy all the name server don't copy dot and paste on the godaddy nameserver.
+
+14. In dns zones click on record sets --> click Add --> type A --> alias --> yes --> click on Azure resource and choose Application gateway ip --> Add
+
+15. check gkangane.shop 
