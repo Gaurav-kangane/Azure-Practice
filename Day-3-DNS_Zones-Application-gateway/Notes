@@ -1,0 +1,35 @@
+What is a DNS Zone in Azure  (It is like Route53 in AWS)
+    A DNS zone is a container that holds DNS records for a domain. In Azure, DNS zones are managed using Microsoft Azure DNS, 
+    which lets you host and manage domain name resolution without running your own DNS servers.
+
+Example:
+    If your domain is example.com, the DNS zone is example.com, and it contains records like A, CNAME, MX, etc.
+
+
+Common DNS Record Types
+You’ll typically manage these inside a DNS zone:
+    A – Maps name to IPv4 address   
+    AAAA – Maps name to IPv6 address
+    CNAME – Alias to another DNS name
+    MX – Mail server records
+    TXT – Verification, SPF, DKIM
+    NS – Name servers (auto-created)
+    SOA – Zone metadata (auto-created)
+
+**********************************************************************************************************************
+
+Azure Application Gateway is a Layer 7 (HTTP/HTTPS) load balancer used to manage and secure web traffic. It works at the application level, so it understands URLs, headers, cookies, and SSL.
+What it’s used for
+    Hosting web applications and APIs
+    Smart routing based on URL paths or hostnames
+    SSL termination and certificate management
+    Protecting apps using Web Application Firewall (WAF)
+
+
+
+1. Layer 7 Load Balancing
+Routes traffic based on:
+    URL path (/app1, /api)
+    Host name (app.example.com)
+    HTTP headers
+    This is more advanced than basic load balancing.
