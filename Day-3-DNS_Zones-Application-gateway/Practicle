@@ -14,6 +14,9 @@
 
 8. Click Add routing rule --> give name, priority = 100, click on backend targets, choose backend target and backend setting add new give name keep as it is then save
 
+9. Create separate 3 private server for aws, azure, gcp and paste index.html in /var/www/html/index.html then click on --> Add multiple targets to create a path-based rule
+   give path /aws --> target name --> and choose backend seeting --> backend target give aws server same do it for azure and gcp
+
 10. Click next till review and create, after successfully create then go applcaiton gateways click on your gateways copy pubilc ip and search on internet check application working or not. 
 
 11. Go and search DNS Zones (it is like route53 in aws ) --> create, Name = gkangane.shop (your domain name), and create it.
