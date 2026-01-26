@@ -7,5 +7,21 @@
 
 4. Go to compute and service --> you can increase Backup retention period to 35 days and save  --> Go to Backup and restore --> select on demand and create backup
 
-2. Search for Storage Account --> give any unique name 
+5. Search for Storage Account --> give any unique name --> sotrage type = Azure blob, workload = other, and create it.
+
+6. After successfully storage account creates --> Data Storage --> create containers --> upload file --> click on file and take url and access it. --> If public access not permitted
+
+7. Go to storage account --> setting --> configurations --> Allow Blob anonymous access = enable --> save
+
+8. Go to containers --> select container --> change access level --> Blob --> then check url you will able to access.
+
+9. Go to Data management --> static website --> enable --> index.html --> save it --> go to containers --> web container will be create select that and upload index.html file 
+
+10. Go to static website --> copy primary endpoint and access the website.
+
+11. Go to your created container and delete file --> select show active and deleted blobs --> undelete file 
+
+12. Go to Data protection --> enable versioning for blobs --> save --> then you can check the version of file and restore any version 
+
+
 
