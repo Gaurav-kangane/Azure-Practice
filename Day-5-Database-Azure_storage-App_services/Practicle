@@ -1,0 +1,11 @@
+1. Search for Azure Database for MySQL flexible servers --> create --> Flexible server = advance create --> choose central us --> networking = for public acces no vnet required and for private
+   vnet is required, click on Allow public access from any Azure service within Azure to this server, click Add current client IP  --> review and create.
+
+2. After create copy the endpoint and you can connet through mysql workbench or with connect option --> create any database --> Go to settings and check all the options
+
+3. Go to Replication --> Add replica --> give name and create it --> connect the reader --> check all the databases.
+
+4. Go to compute and service --> you can increase Backup retention period to 35 days and save  --> Go to Backup and restore --> select on demand and create backup
+
+2. Search for Storage Account --> give any unique name 
+
