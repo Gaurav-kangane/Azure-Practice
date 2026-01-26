@@ -1,1 +1,140 @@
+What is Azure Database?
+    Azure Database is a set of fully managed database services provided by Microsoft Azure.
+Azure handles:
+    OS
+    Patching
+    Backups
+    High availability
+    Security
+    You focus on data and applications, not servers.
 
+
+Azure Database for MySQL – Flexible Server
+    Best for open-source MySQL apps
+    MySQL 5.7 / 8.0
+    Burstable & General Purpose SKUs
+    Public or Private access
+    Zone redundancy (optional)
+
+Use when
+    Web apps (Node.js, PHP, Java)
+    Migration from on-prem MySQL
+    Learning cloud databases
+
+
+Azure SQL Database (PaaS)
+    Best for SQL Server workloads
+    SQL Server compatible
+    Automatic backups
+    Built-in HA
+    Scales easily
+
+Use when
+    You know SQL Server
+    .NET / enterprise apps
+    Need minimal maintenance
+
+
+*****************************************************************************************************************************************************
+
+What is an Azure Storage Account?
+    An Azure Storage Account is a container for data services provided by Microsoft Azure.
+
+One storage account can hold:
+    Blobs (objects)
+    Files (shared file system)
+    Queues (messages)
+    Tables (NoSQL key-value
+
+
+1. Blob Storage
+    For unstructured data
+    Images, videos, logs, backups
+    Containers → blobs
+    Hot / Cool / Archive tiers
+
+Common use
+    App uploads
+    Backup storage
+    Static website hosting
+
+
+2. File Storage
+    For file shares
+    SMB / NFS access
+    Can be mounted on VMs
+    Acts like a shared drive
+
+Common use
+    Lift-and-shift apps
+    Shared config files
+    Legacy apps
+
+************************************************************************************************************************************************************************
+
+What is Azure App Service?
+    Azure App Service is a fully managed PaaS service from Microsoft Azure to host web applications and APIs.
+
+You deploy your code.
+Azure handles:
+    Servers
+    OS patching
+    Scaling
+    Availability
+    Security basics
+    No VM management needed.
+
+
+What can you host on App Service?
+You can host:
+    Web apps
+    
+    REST APIs
+    
+    Backend services
+    
+    Mobile app backends
+
+Supported runtimes
+    .NET
+    
+    Java
+    
+    Node.js
+    
+    Python
+    
+    PHP
+    
+    Ruby
+    
+    Custom containers (Docker)
+
+
+Why Azure App Service is used
+1. No server management
+    You don’t:
+    Create VMs
+    Patch OS
+    Configure load balancers
+    Azure handles all of that. You focus only on code.
+
+2. Faster development and deployment
+    You can:
+    Deploy in minutes
+    Push code directly from GitHub
+    Roll back easily using deployment slots
+    This speeds up development and releases.
+
+3. Easy scaling
+    When traffic increases:
+    Scale up (more CPU/RAM)
+    Scale out (more instances)
+    Auto-scale based on demand
+    No manual infra changes needed.
+
+4. Built-in high availability
+    Apps run on multiple instances
+    Load balanced automatically
+    Failures are handled by Azure
+    You don’t design HA yourself.
