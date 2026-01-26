@@ -1,3 +1,4 @@
+**************** Azure Database*******************************************
 1. Search for Azure Database for MySQL flexible servers --> create --> Flexible server = advance create --> choose central us --> networking = for public acces no vnet required and for private
    vnet is required, click on Allow public access from any Azure service within Azure to this server, click Add current client IP  --> review and create.
 
@@ -6,6 +7,8 @@
 3. Go to Replication --> Add replica --> give name and create it --> connect the reader --> check all the databases.
 
 4. Go to compute and service --> you can increase Backup retention period to 35 days and save  --> Go to Backup and restore --> select on demand and create backup
+
+*************** Storage Account ******************************************
 
 5. Search for Storage Account --> give any unique name --> sotrage type = Azure blob, workload = other, and create it.
 
@@ -23,5 +26,9 @@
 
 12. Go to Data protection --> enable versioning for blobs --> save --> then you can check the version of file and restore any version 
 
+******************************** App Services**************
 
+13. serach for app services --> web app --> runtime stack = python 3.14 --> pricing plan =  premium v4 --> Deployment --> Authentication settings = enabled, Continuous deployment settings = enable 
+
+14. Then add your github account --> repository = Azure-appservice, branch = main --> click next --> review and create.
 
