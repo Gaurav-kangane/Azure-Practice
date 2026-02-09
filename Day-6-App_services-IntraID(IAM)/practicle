@@ -1,0 +1,7 @@
+1. Search for App services and create give name, select python3.14, select region --> central india enter next till validation and create it.
+
+2. Go to created resources then go to Deployment Center and choose github, choose account, choose repo --> Azure-appservices --> save it.
+
+3. Go to overview and click on default domain you will see your application.
+
+4. If you make any changes in code on github it will auto sync and do modification in application.
