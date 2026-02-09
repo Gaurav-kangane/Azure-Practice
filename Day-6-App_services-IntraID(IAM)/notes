@@ -1,0 +1,13 @@
+Azure App Service is a fully managed platform on Microsoft Azure for building, deploying, and scaling web applications and APIs. You focus on code. Azure handles the infrastructure.
+
+What you can build
+    Web apps and REST APIs    
+    Backend services for mobile apps
+    Apps using .NET, Java, Node.js, Python, PHP, or containers
+
+Why teams use it
+    No server management: Azure manages OS patching, runtime updates, and availability
+    Easy scaling: Scale up or out based on traffic
+    CI/CD friendly: Native integration with GitHub and Azure DevOps
+    Built-in security: SSL, authentication, and managed identities
+    High availability: Backed by Azure SLAs
